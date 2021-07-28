@@ -15,7 +15,7 @@ The goal of this project was to improve flight scheduling for Orlando Internatio
 <!-- GETTING STARTED -->
 ## Getting Started
 
-You can download the final version of the user interface off [this project's GitHub repository](https://github.com/nicholasgonzalez1/Flight_Scheduling_Dashboard/blob/main/Flight%20Scheduling.xlsm). The file must be downloaded as a macro-enabled worksheet.
+You can download the final version of the user interface off [the project's repository](https://github.com/nicholasgonzalez1/Flight_Scheduling_Dashboard/blob/main/Flight%20Scheduling.xlsm). The file must be downloaded as a macro-enabled worksheet.
 
 <!-- USAGE EXAMPLES -->
 
