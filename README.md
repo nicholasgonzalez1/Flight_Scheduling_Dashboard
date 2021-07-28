@@ -3,7 +3,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+The goal of this project was to improve flight scheduling for Orlando International Airport (MCO). Our team was tasked with using historical flight records from January 1st and 2nd of 2015 to predict the flight status (e.g. potential delays and turnover scheduling) for the 'then' incoming flights of January 3rd through 6th of 2015. 
+
+<img src="https://github.com/nicholasgonzalez1/Flight_Scheduling_Dashboard/blob/main/images/gui_screen.JPG?raw=true" width="800">
 
 Here's a blank template to get started:
 **To avoid retyping too much info. Do a search and replace with your text editor for the following:**
@@ -11,12 +13,8 @@ Here's a blank template to get started:
 
 
 ### Built With
-
-* []()
-* []()
-* []()
-
-
+* Excel
+* VBA
 
 <!-- GETTING STARTED -->
 ## Getting Started
