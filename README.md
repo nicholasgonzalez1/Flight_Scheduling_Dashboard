@@ -47,7 +47,7 @@ Pivot tables were created to summarize the initial dataset and determine the n h
 <img src="https://github.com/nicholasgonzalez1/Flight_Scheduling_Dashboard/blob/main/images/pivot_tables.JPG?raw=true" width="600">
 </kbd><br><br>
 
-These values were then referenced to calculate the conditional probabilities for each flight. As you can see in column G of the image below, the conditional probabilities reads as follows, "Given that a flight is delayed, what is the probability that the flight operates under this airline?". In the case of row 9, "this airline" would bw WN, Southwest Airlines.
+These values were then referenced to calculate the conditional probabilities for each flight. As you can see in column G of the image below, the conditional probabilities reads as follows, "Given that a flight is delayed, what is the probability that the flight operates under this airline?". In the case of row 9, "this airline" would be WN, Southwest Airlines.
 
 <kbd>
 <img src="https://github.com/nicholasgonzalez1/Flight_Scheduling_Dashboard/blob/main/images/jan_3_6_data.JPG?raw=true" width="600">
