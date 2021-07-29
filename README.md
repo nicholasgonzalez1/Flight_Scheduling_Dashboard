@@ -20,11 +20,18 @@ You can download the final version of the user interface off [the project's repo
 <!-- USAGE EXAMPLES -->
 
 ## Statistical Model for Delay Prediction
-The model used in this project is based off the Naive Bayes Classifier. It was used two separate times: first, to predict whether a flight would be delayed and second, to determine its delay amount.<br><br>Given a set of attributes for a flight (e.g. airport, airline, departure time of day), we needed to determine the **probability that it would fall under a specific delay category.** This probability was calculated using the following formula where C<sub>k</sub> represents the delay category *k*; X, the set of flight attributes of length *n*; and x<sub>i</sub>, a specific attribute in that set.
+The model used in this project is based off the Naive Bayes Classifier. It was used two separate times: first, to predict whether a flight would be delayed and second, to determine its delay amount.<br><br>Given a set of attributes for a flight (e.g. airport, airline, departure time of day), we needed to determine the **probability that it would fall under a specific delay category.** This probability was calculated using the following formula where
+- C<sub>k</sub>, the delay category *k*
+- X, the set of flight attributes of length *n*
+- x<sub>i</sub>, a specific attribute in that set.
 
 <img src="https://github.com/nicholasgonzalez1/Flight_Scheduling_Dashboard/blob/main/images/naive_bayes.JPG?raw=true" width="400">
 
-Due to a limited data set, we estimated the conditional densities using the formula below where n hat represents the number of historial flights in which C=C<sub>k</sub> and X=x; n, the number of historical flights where C=C<sub>k</sub>; p, equal to 1 / number of possible values for attribute *i*; and m, an equivalent sample size.
+Due to a limited data set, we estimated the conditional densities using the formula below where
+- n hat, the number of historial flights in which C=C<sub>k</sub> and X=x
+- n, the number of historical flights where C=C<sub>k</sub>
+- p, equal to 1 / number of possible values for attribute *i*
+- m, an equivalent sample size.
 
 <img src="https://github.com/nicholasgonzalez1/Flight_Scheduling_Dashboard/blob/main/images/conditional_density_estimation.JPG?raw=true" width="275">
 
