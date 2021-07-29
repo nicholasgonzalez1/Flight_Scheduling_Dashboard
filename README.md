@@ -8,7 +8,7 @@ The goal of this project was to improve flight scheduling for Orlando Internatio
 <br />
 <kbd>
 <img src="https://github.com/nicholasgonzalez1/Flight_Scheduling_Dashboard/blob/main/images/gui_screen.JPG?raw=true" width="800">
-<\kbd>
+</kbd>
 
 ### Built With
 * Excel
