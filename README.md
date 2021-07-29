@@ -59,7 +59,7 @@ Once all P(C<sub>k</sub> | X) were calculated for all delay categories *k*, the 
 <img src="https://github.com/nicholasgonzalez1/Flight_Scheduling_Dashboard/blob/main/images/decision_rule.JPG?raw=true" width="315">
 </kbd><br><br>
 
-As mentioned earlier, this statistical model was used twice. The first time around considered all flight records, and was trying to determine C=Delayed or C=Not Delayed. The second time this model was used, only flights that had been previously been determined as delayed were considered. However, this time we were trying to calculate what delay bin a flight would fall under - C=(5-15 min delay), C=(15-45 min delay), or C=(>45 min delay).
+As mentioned earlier, this statistical model was used twice. The first time around considered all flight records, and was trying to determine C=Delayed or C=Not Delayed. The second time this model was used, only flights that had been previously been determined as delayed were considered. However, this time we were trying to calculate what delay bin a flight would fall under: C=(5-15 min delay), C=(15-45 min delay), or C=(>45 min delay).
     
 ## Heuristic for Minimizing Gate Utilization
 
