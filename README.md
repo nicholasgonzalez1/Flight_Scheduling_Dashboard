@@ -31,7 +31,7 @@ The model used in this project is based off the Naive Bayes Classifier. It was u
 <img src="https://github.com/nicholasgonzalez1/Flight_Scheduling_Dashboard/blob/main/images/naive_bayes.JPG?raw=true" width="400">
 </kbd><br><br>
     
-Due to a limited data set, we estimated the conditional densities using the formula below where
+Due to a limited data set, we estimated the conditional probabilities using the formula below where
 - n hat, the number of historial flights in which C=C<sub>k</sub> and X=x
 - n, the number of historical flights where C=C<sub>k</sub>
 - p, equal to 1 / number of possible values for attribute *i*
@@ -40,6 +40,26 @@ Due to a limited data set, we estimated the conditional densities using the form
 <kbd>
 <img src="https://github.com/nicholasgonzalez1/Flight_Scheduling_Dashboard/blob/main/images/conditional_density_estimation.JPG?raw=true" width="275">
 </kbd>
+
+Pivot tables were created to summarize the initial dataset and determine the n hat, n, and p values.
+
+<kbd>
+<img src="https://github.com/nicholasgonzalez1/Flight_Scheduling_Dashboard/blob/main/images/pivot_tables.JPG?raw=true" width="275">
+</kbd>
+
+These values were then referenced to calculate the conditional probabilities for each flight. As you can see in column G of the image below, the conditional probabilities reads as follows, "Given that a flight is delayed, what is the probability that the flight operates under this airline?". In the case of row 9, "this airline" would bw WN, Southwest Airlines.
+
+<kbd>
+<img src="https://github.com/nicholasgonzalez1/Flight_Scheduling_Dashboard/blob/main/images/jan_3_6_data.JPG?raw=true" width="275">
+</kbd>
+
+Once all P(C<sub>k</sub>|X) has been calculated for all delay categories *k*, the largest P(C<sub>k</sub>|X) value determines the predicted class, as seen in the image below.
+
+<kbd>
+<img src="https://github.com/nicholasgonzalez1/Flight_Scheduling_Dashboard/blob/main/images/decision_rule.JPG?raw=true" width="275">
+</kbd>
+
+As mentioned earlier, this statistical model was used twice. The first time around considered all flight records, and was trying to determine whether C=Delayed or C=Not Delayed. The second time this model was used, only flights that had been previously been determined as delayed were considered. However, this time we were trying to calculate what delay bin a flight would fall under - C=(5-15 min delay), C=(15-45 min delay), or C=(>45 min delay).
     
 ## Heuristic for Minimizing Gate Utilization
 
