@@ -35,6 +35,7 @@ Public Function AssignGates(ByVal myFlights As Collection, ByVal Airside As Inte
 
     'myFlights is a collection of Flight objects
     
+    'variable declarations
     Dim i As Integer
     Dim j As Integer
     Dim num As Integer
@@ -45,6 +46,8 @@ Public Function AssignGates(ByVal myFlights As Collection, ByVal Airside As Inte
     Dim val As Integer
     i = 0
     
+    'these if statements determine gate numbers as set by MCO's actual gate numbering system
+    'for example, in Airside 2 of MCO, gates begin at number 100 (at the time of this project's completion)
     If (Airside = 1) Then
         num = 1
     ElseIf (Airside = 2) Then
@@ -55,15 +58,14 @@ Public Function AssignGates(ByVal myFlights As Collection, ByVal Airside As Inte
         num = 70
     End If
     
+    'myGates is a collection of gates, where each gate contains a collection of flight objects assigned to that gate.
+    'myGates is currently empty because the algorithm has not started yet
     Dim myGates As New Collection
     Dim aGate As Gate
     Dim gateFound As Boolean
     
-    'myGates is a collection of gates, where each gate contains
-    'a collection of flight objects assigned to that gate.
-    'myGates is currently empty because the algorithm has not started yet
-    
-    For i = 1 To myFlights.Count 'loops through all Flight objects in myFlights
+    'loops through all Flight objects in myFlights
+    For i = 1 To myFlights.Count 
     
         'Purpose of this initial if statement:
         'If this is the first flight being evaluated, then there are no gates in myGates yet
@@ -81,17 +83,17 @@ Public Function AssignGates(ByVal myFlights As Collection, ByVal Airside As Inte
             departure_i = myFlights.Item(i).GetDeparture()
             
             'Some flights might arrive at a gate before 23:59 and then leave the next day (after 0:00)
-            'for sake of algorithm, if such case occurs, we change departure_i to 23:59.
+            'for sake of the algorithm, if such case occurs, we change departure_i to 23:59.
             'Note that the departure_i is just a variable and actual flight data is not altered
             If (departure_i < arrival_i) Then
-                departure_i = 0.999305555555556
+                departure_i = 0.999305555555556   'represents 23:59 in decimal notation
             End If
             
-            'Sorts all gates in my gates so that the gates with least amount of flights assigned
+            'This next statement sorts all gates in myGates so that the gates with least amount of flights assigned
             'are considered first. This prevents some gates from having more flights assigned than other gates
             Set myGates = sortGatesByFlightNumber(myGates)
             
-            'loops through all gate object in myGates to consider *first* and *best* gate avaialable
+            'loops through all gate object in myGates to consider first and best gate avaialable
             For j = 1 To myGates.Count
                 
                 arrival_j = myGates.Item(j).LastFlight().GetArrival() 'grabs arrival/departure times of the last flight
@@ -104,17 +106,20 @@ Public Function AssignGates(ByVal myFlights As Collection, ByVal Airside As Inte
                 'this if statement ensures that times do not conflict for the flights being evaluated
                 '-1.51427469135803E-03 represents the minimum time amount that must occur in between flights
                 If ((departure_j - arrival_i) * (departure_i - arrival_j) < -1.51427469135803E-03) Then
+                
                     'if we enter this if statement, that means we have found the first and best gate available.
                     'We mark gateFound as true and stop all other gate evaluation
                     myFlights.Item(i).SetGate (myGates.Item(j).GetGateNumber())
                     myGates.Item(j).AddFlight myFlights.Item(i)
                     gateFound = True
                     Exit For
+                    
                 End If
                 
             Next
             
-            'If gateFound = False, then we have not found an available gate for the flight and must create a new gate
+            'If we reach this point and gateFound still equals False, 
+            'then we have not found an available gate for the flight and must create a new gate
             If (Not gateFound) Then
                 Set aGate = New Gate
                 aGate.SetGateNumber (num)
@@ -125,9 +130,13 @@ Public Function AssignGates(ByVal myFlights As Collection, ByVal Airside As Inte
             End If
             
         End If
+        
+        'The code above is for assigning a gate to one Flight object. 
+        'The Next iteration represents the next Flight object to be assessed.
+        
     Next
     
-    Set AssignGates = myGates
+    Set AssignGates = myGates 'this is the return statement
 
 End Function
 ```
