@@ -30,6 +30,108 @@ Due to a limited data set, we estimated the conditional densities using the form
 
 ## Heuristic for Minimizing Gate Utilization
 
+```vb
+Public Function AssignGates(ByVal myFlights As Collection, ByVal Airside As Integer) As Collection
+
+    'myFlights is a collection of Flight objects
+    
+    Dim i As Integer
+    Dim j As Integer
+    Dim num As Integer
+    Dim arrival_j As Double
+    Dim departure_j As Double
+    Dim arrival_i As Double
+    Dim departure_i As Double
+    Dim val As Integer
+    i = 0
+    
+    If (Airside = 1) Then
+        num = 1
+    ElseIf (Airside = 2) Then
+        num = 100
+    ElseIf (Airside = 3) Then
+        num = 30
+    Else
+        num = 70
+    End If
+    
+    Dim myGates As New Collection
+    Dim aGate As Gate
+    Dim gateFound As Boolean
+    
+    'myGates is a collection of gates, where each gate contains
+    'a collection of flight objects assigned to that gate.
+    'myGates is currently empty because the algorithm has not started yet
+    
+    For i = 1 To myFlights.Count 'loops through all Flight objects in myFlights
+    
+        'Purpose of this initial if statement:
+        'If this is the first flight being evaluated, then there are no gates in myGates yet
+        'Therefore, immediately create a new gate and assign that flight to it
+        If (i = 1) Then
+            Set aGate = New Gate
+            aGate.SetGateNumber (num)
+            myFlights.Item(i).SetGate (num)
+            aGate.AddFlight myFlights.Item(i)
+            myGates.Add aGate
+            num = num + 1
+        Else
+            gateFound = False
+            arrival_i = myFlights.Item(i).GetArrival() 'for flight being evaluated, we grab arrival/departure times
+            departure_i = myFlights.Item(i).GetDeparture()
+            
+            'Some flights might arrive at a gate before 23:59 and then leave the next day (after 0:00)
+            'for sake of algorithm, if such case occurs, we change departure_i to 23:59.
+            'Note that the departure_i is just a variable and actual flight data is not altered
+            If (departure_i < arrival_i) Then
+                departure_i = 0.999305555555556
+            End If
+            
+            'Sorts all gates in my gates so that the gates with least amount of flights assigned
+            'are considered first. This prevents some gates from having more flights assigned than other gates
+            Set myGates = sortGatesByFlightNumber(myGates)
+            
+            'loops through all gate object in myGates to consider *first* and *best* gate avaialable
+            For j = 1 To myGates.Count
+                
+                arrival_j = myGates.Item(j).LastFlight().GetArrival() 'grabs arrival/departure times of the last flight
+                departure_j = myGates.Item(j).LastFlight().GetDeparture() 'in the gate that is currently being considered
+                
+                If (departure_j < arrival_j) Then
+                    arrival_j = 0
+                End If
+                
+                'this if statement ensures that times do not conflict for the flights being evaluated
+                '-1.51427469135803E-03 represents the minimum time amount that must occur in between flights
+                If ((departure_j - arrival_i) * (departure_i - arrival_j) < -1.51427469135803E-03) Then
+                    'if we enter this if statement, that means we have found the first and best gate available.
+                    'We mark gateFound as true and stop all other gate evaluation
+                    myFlights.Item(i).SetGate (myGates.Item(j).GetGateNumber())
+                    myGates.Item(j).AddFlight myFlights.Item(i)
+                    gateFound = True
+                    Exit For
+                End If
+                
+            Next
+            
+            'If gateFound = False, then we have not found an available gate for the flight and must create a new gate
+            If (Not gateFound) Then
+                Set aGate = New Gate
+                aGate.SetGateNumber (num)
+                myFlights.Item(i).SetGate (num)
+                aGate.AddFlight myFlights.Item(i)
+                myGates.Add aGate
+                num = num + 1
+            End If
+            
+        End If
+    Next
+    
+    Set AssignGates = myGates
+
+End Function
+```
+
 ## User Interface Walkthrough
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
