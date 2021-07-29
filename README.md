@@ -6,6 +6,9 @@
     <li><a href="#about-the-project">About the Project</a></li>
     <li><a href="#built-with">Built With</a></li>
     <li><a href="#getting-started">Getting Started</a></li>
+    <li><a href="#statistical-model-for-delay-prediction">Statistical Model for Delay Prediction</a></li>
+    <li><a href="#heuristic-for-minimizing-gate-utilization">Heuristic for Minimizing Gate Utilization</a></li>
+    <li><a href="#user-interface-walkthrough">Getting Started</a></li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
 </details>
