@@ -1,5 +1,5 @@
 # Flight Scheduling Dashboard
-
+<!-- TABLE OF CONTENTS -->
 <details open="open">
   <summary>Table of Contents</summary>
   <ol>
@@ -12,13 +12,14 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About the Project
+
+The goal of this project was to improve flight scheduling for Orlando International Airport (MCO). Our team was tasked with using historical flight records from January 1st and 2nd of 2015 to predict the flight status for the 'then' incoming flights of January 3rd through 6th of 2015.<br><br>After using a  statistical model to determine a flight's delay status, we implemented a simple heuristic for assigning them to a respective airport gate that also ensured to minimize the overall number of gates being utilized. An interactive gantt chart styled dashboard was then designed to display all appropriately scheduled incoming flights for MCO.
 <br>
 <kbd>
 <img src="https://github.com/nicholasgonzalez1/Flight_Scheduling_Dashboard/blob/main/images/gui_screen.JPG?raw=true" width="800">
 </kbd><br><br>
 
-The goal of this project was to improve flight scheduling for Orlando International Airport (MCO). Our team was tasked with using historical flight records from January 1st and 2nd of 2015 to predict the flight status for the 'then' incoming flights of January 3rd through 6th of 2015.<br><br>After using a  statistical model to determine a flight's delay status, we implemented a simple heuristic for assigning them to a respective airport gate that also ensured to minimize the overall number of gates being utilized. An interactive gantt chart styled dashboard was then designed to display all appropriately scheduled incoming flights for MCO.
-
+<!-- BUILT WITH -->
 ## Built With
 Due to the subject material of the course (Spreadsheet Decision Support Systems), our team was limited to only using the following software and languages.
 * Excel
@@ -30,7 +31,6 @@ Due to the subject material of the course (Spreadsheet Decision Support Systems)
 You can download the final version of the user interface off [the project's repository](https://github.com/nicholasgonzalez1/Flight_Scheduling_Dashboard/blob/main/Flight%20Scheduling.xlsm). The file must be downloaded as a macro-enabled worksheet.
 
 <!-- USAGE EXAMPLES -->
-
 ## Statistical Model for Delay Prediction
 The model used in this project is based off the Naive Bayes Classifier. It was used two separate times: first, to predict whether a flight would be delayed and second, to determine its delay amount.<br><br>Given a set of attributes for a flight (e.g. airport, airline, departure time of day), we needed to determine the **probability that it would fall under a specific delay category.** This probability was calculated using the following formula where
 - C<sub>k</sub>, the delay category *k*
