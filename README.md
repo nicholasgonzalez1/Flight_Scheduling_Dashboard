@@ -25,7 +25,7 @@ The model used in this project is based off the Naive Bayes Classifier. It was u
 - X, the set of flight attributes of length *n*
 - x<sub>i</sub>, a specific attribute in that set.
 
-<img src="https://github.com/nicholasgonzalez1/Flight_Scheduling_Dashboard/blob/main/images/naive_bayes.JPG?raw=true" width="400">
+<img src="https://github.com/nicholasgonzalez1/Flight_Scheduling_Dashboard/blob/main/images/naive_bayes.JPG?raw=true" width="400" border="5">
 
 Due to a limited data set, we estimated the conditional densities using the formula below where
 - n hat, the number of historial flights in which C=C<sub>k</sub> and X=x
@@ -33,7 +33,7 @@ Due to a limited data set, we estimated the conditional densities using the form
 - p, equal to 1 / number of possible values for attribute *i*
 - m, an equivalent sample size.
 
-<img src="https://github.com/nicholasgonzalez1/Flight_Scheduling_Dashboard/blob/main/images/conditional_density_estimation.JPG?raw=true" width="275">
+<img src="https://github.com/nicholasgonzalez1/Flight_Scheduling_Dashboard/blob/main/images/conditional_density_estimation.JPG?raw=true" width="275" border="5">
 
 ## Heuristic for Minimizing Gate Utilization
 
