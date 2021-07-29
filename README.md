@@ -90,8 +90,8 @@ Public Function AssignGates(ByVal myFlights As Collection, ByVal Airside As Inte
             num = num + 1
         Else
             gateFound = False
-            arrival_i = myFlights.Item(i).GetArrival() 'for flight being evaluated, we grab arrival/departure times
-            departure_i = myFlights.Item(i).GetDeparture()
+            arrival_i = myFlights.Item(i).GetArrival() 'for flight being evaluated, we grab arrival/departure times, these will be used
+            departure_i = myFlights.Item(i).GetDeparture() 'to determine potential time conflicts for flights already scheduled in a gate
             
             'Some flights might arrive at a gate before 23:59 and then leave the next day (after 0:00)
             'for sake of the algorithm, if such case occurs, we change departure_i to 23:59.
@@ -107,8 +107,8 @@ Public Function AssignGates(ByVal myFlights As Collection, ByVal Airside As Inte
             'loops through all gate object in myGates to consider first and best gate avaialable
             For j = 1 To myGates.Count
                 
-                arrival_j = myGates.Item(j).LastFlight().GetArrival() 'grabs arrival/departure times of the last flight
-                departure_j = myGates.Item(j).LastFlight().GetDeparture() 'in the gate that is currently being considered
+                arrival_j = myGates.Item(j).LastFlight().GetArrival() 'grabs arrival/departure times of the last flight in gate j.
+                departure_j = myGates.Item(j).LastFlight().GetDeparture() 'gate j is the gate that is currently being considered
                 
                 If (departure_j < arrival_j) Then
                     arrival_j = 0
