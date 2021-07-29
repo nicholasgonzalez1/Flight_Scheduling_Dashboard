@@ -27,7 +27,7 @@ The model used in this project is based off the Naive Bayes Classifier. It was u
 
 <kbd>
 <img src="https://github.com/nicholasgonzalez1/Flight_Scheduling_Dashboard/blob/main/images/naive_bayes.JPG?raw=true" width="400">
-</kbd>
+</kbd><br><br>
     
 Due to a limited data set, we estimated the conditional densities using the formula below where
 - n hat, the number of historial flights in which C=C<sub>k</sub> and X=x
