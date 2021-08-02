@@ -76,7 +76,7 @@ As mentioned earlier, this statistical model was used twice. The first time arou
     
 ## Heuristic for Minimizing Gate Utilization
 
-For each terminal, a collection of flights are assigned to gates depending on their respective gate arrival and departure times. The heuristic used focuses on minimizing the amount of gates utilized within each terminal. As a results, this leads to fewer flight attendants needed to manage the terminal and therefore, cheaper operational costs for MCO.
+For each terminal, a collection of flights are assigned to gates depending on their respective gate arrival and departure times. The heuristic used focuses on minimizing the amount of gates utilized within each terminal. As a result, this leads to fewer flight attendants needed to manage the terminal and therefore, cheaper operational costs for MCO.
 
 ### Heuristic Steps
 
