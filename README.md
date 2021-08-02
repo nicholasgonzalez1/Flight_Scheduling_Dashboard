@@ -200,9 +200,11 @@ End Function
 
 ## User Interface Walkthrough
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Screenshots are provided below showcasing how to use the primary features of the main user interface. 
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+<kbd>
+<img src="https://github.com/nicholasgonzalez1/Flight_Scheduling_Dashboard/blob/main/images/walkthrough_1.png?raw=true" width="800">
+</kbd><br>
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
