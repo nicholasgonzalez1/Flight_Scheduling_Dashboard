@@ -8,7 +8,15 @@
     <li><a href="#getting-started">Getting Started</a></li>
     <li><a href="#statistical-model-for-delay-prediction">Statistical Model for Delay Prediction</a></li>
     <li><a href="#heuristic-for-minimizing-gate-utilization">Heuristic for Minimizing Gate Utilization</a></li>
-    <li><a href="#user-interface-walkthrough">User Interface Walkthrough</a></li>
+    <li>
+      <a href="#user-interface-walkthrough">User Interface Walkthrough</a>
+      <ul>
+        <li><a href="#search-criteria-and-filters">Search Criteria and Filters</a></li>
+        <li><a href="#view-more-flight-information">View More Flight Information</a></li>
+        <li><a href="#reschedule-a-flight">Reschedule a Flight</a></li>
+        <li><a href="#cancel-a-flight">Cancel a Flight</a></li>
+      </ul>
+    </li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
 </details>
@@ -202,29 +210,38 @@ End Function
 
 Screenshots are provided below showcasing how to use the primary features of the main user interface. 
 
+### Search Criteria and Filters
 After entering the main screen, the user can toggle the search criteria (date, time window, airside/terminal) to view currently scheduled flights in the system. For a more specific search, use the provided search filters (airline, delay). **Important:** to update the dashboard with the new search criteria/filters, make sure to press the 'Search Flights' button.
 <br><br>
 <kbd>
 <img src="https://github.com/nicholasgonzalez1/Flight_Scheduling_Dashboard/blob/main/images/walkthrough_1.png?raw=true" width="800">
 </kbd><br><br>
-
+### View More Flight Information
 To view more details about a specific flight, double click any cell with a scheduled flight. The GUI will transition to another tab displaying more information about that flight.
 <br><br>
 <kbd>
 <img src="https://github.com/nicholasgonzalez1/Flight_Scheduling_Dashboard/blob/main/images/flight_info_screen.JPG?raw=true" width="800">
 </kbd><br><br>
-
+### Reschedule a Flight
 To reschedule a flight, select one of its scheduled cells and then press 'Reschedule Flight'. A menu will appear with two input fields. If the user would like to reschedule the flight to a time slot on another date and/or time window, they would select the inputs from the combo boxes and then press 'Accept New Location'. However, if the user wants to reschedule the flight to a time on the current date and time window, they would press 'Use Current Location'.
 <br><br>
 <kbd>
 <img src="https://github.com/nicholasgonzalez1/Flight_Scheduling_Dashboard/blob/main/images/walkthrough_3.png?raw=true" width="800">
 </kbd><br><br>
 
-
+After selecting either 'Use Current Location' or 'Accept New Location', the user will be prompted to highlight the flight's new location. After pressing 'OK', the system will verify that the flight's new arrival time is valid and that it does not overlap with any other scheduled flights.
+<br><br>
+<kbd>
+<img src="https://github.com/nicholasgonzalez1/Flight_Scheduling_Dashboard/blob/main/images/walkthrough_4.png?raw=true" width="800">
+</kbd><br><br>
+### Cancel a Flight
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
-
-* []()
-* []()
-* []()
+Thank you to my other team members:
+- [Anthony Joanes](linkedin.com/in/ajoanes)
+- Erin Dempsey
+- [Ivan Trpkovski](linkedin.com/in/ivan-trp2345)
+- [Samantha Pertsas](linkedin.com/in/samantha-pertsas-cssgb-72239b136)
+- [Tej Patel](https://www.linkedin.com/in/tejmpatel/)
+- [Wade Niles](linkedin.com/in/wade-niles-4091381aa)
