@@ -76,7 +76,7 @@ As mentioned earlier, this statistical model was used twice. The first time arou
     
 ## Heuristic for Minimizing Gate Utilization
 
-For each terminal, a collection of flights are assigned to gates depending on their respective gate arrival and departure times. The heuristic used focuses on minimizing the amount of gates utilized within each terminal. As a result, this leads to fewer flight attendants needed to manage the terminal and therefore, cheaper operational costs for MCO. The `AssignGates()` is located here: Excel Developer Tab>Visual Basic>VBAProject>Modules>Optimizer.
+For each terminal, a collection of flights are assigned to gates depending on their respective gate arrival and departure times. The heuristic used focuses on minimizing the amount of gates utilized within each terminal. As a result, this leads to fewer flight attendants needed to manage the terminal and therefore, cheaper operational costs for MCO. The `AssignGates()` function is located here: Excel Developer Tab>Visual Basic>VBAProject>Modules>Optimizer.
 
 ### Heuristic Steps
 
@@ -202,9 +202,20 @@ End Function
 
 Screenshots are provided below showcasing how to use the primary features of the main user interface. 
 
+Toggle the search criteria (date, time window, airside/terminal) to view flights currently scheduled. For a more specific search, use the search filters (airline, delay). Important: to update the dashboard, make sure to press the 'Search Flights' button.
+<br><br>
 <kbd>
 <img src="https://github.com/nicholasgonzalez1/Flight_Scheduling_Dashboard/blob/main/images/walkthrough_1.png?raw=true" width="800">
-</kbd><br>
+</kbd><br><br>
+
+To view more details about a specific flight, double click any cell with a scheduled cell. The GUI will transition to another tab displaying more information about that flight.
+<br><br>
+<kbd>
+<img src="https://github.com/nicholasgonzalez1/Flight_Scheduling_Dashboard/blob/main/images/flight_info_screen.JPG?raw=true" width="800">
+</kbd><br><br>
+
+
+
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
