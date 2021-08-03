@@ -39,7 +39,9 @@ Due to the subject material of the course (Spreadsheet Decision Support Systems)
 <!-- GETTING STARTED -->
 ## Getting Started
 
-The final version of the user interface can be downloaded off [the project's repository](https://github.com/nicholasgonzalez1/Flight_Scheduling_Dashboard/blob/main/Flight%20Scheduling.xlsm). The file must be downloaded as a macro-enabled worksheet. **Note:** this project was implemented and tested on a Windows PC. It is possible that unforeseen technical issues can arise if the file is downloaded on a MacOS.
+The final version of the user interface can be downloaded off [the project's repository](https://github.com/nicholasgonzalez1/Flight_Scheduling_Dashboard/blob/main/Flight%20Scheduling.xlsm). The file must be downloaded as a macro-enabled worksheet. 
+<br><br>
+**Note:** this project was implemented and tested on a Windows PC. It is possible that unforeseen technical issues can arise if the file is downloaded on a MacOS.
 
 <!-- USAGE EXAMPLES -->
 ## Statistical Model for Delay Prediction
@@ -208,7 +210,7 @@ End Function
 
 ## User Interface Walkthrough
 
-Screenshots are provided below showcasing how to use the primary features of the main user interface. 
+Screenshots are provided below showcasing how to use the primary features of the main user interface. The code behind the interface's functionality can be found here: Excel Developer Tab > Visual Basic > VBAProject > Microsoft Excel Objects > Sheet1 (GUI).
 
 ### Search Criteria and Filters
 After entering the main screen, the user can toggle the search criteria (date, time window, airside/terminal) to view currently scheduled flights in the system. For a more specific search, use the provided search filters (airline, delay). **Important:** to update the dashboard with the new search criteria/filters, make sure to press the 'Search Flights' button.
@@ -235,6 +237,11 @@ After selecting either 'Use Current Location' or 'Accept New Location', the user
 <img src="https://github.com/nicholasgonzalez1/Flight_Scheduling_Dashboard/blob/main/images/walkthrough_4.png?raw=true" width="800">
 </kbd>
 ### Cancel a Flight
+To cancel a flight, select one of its scheduled cells and then press 'Cancel Flight'. A menu will appear prompting the user to confirm that they do want to cancel the flight. If 'Yes' is selected, the flight will no longer appear on the GUI.
+<br><br>
+<kbd>
+<img src="https://github.com/nicholasgonzalez1/Flight_Scheduling_Dashboard/blob/main/images/walkthrough_6.png?raw=true" width="800">
+</kbd>
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
