@@ -31,7 +31,7 @@ Due to the subject material of the course (Spreadsheet Decision Support Systems)
 <!-- GETTING STARTED -->
 ## Getting Started
 
-You can download the final version of the user interface off [the project's repository](https://github.com/nicholasgonzalez1/Flight_Scheduling_Dashboard/blob/main/Flight%20Scheduling.xlsm). The file must be downloaded as a macro-enabled worksheet.
+The final version of the user interface can be downloaded off [the project's repository](https://github.com/nicholasgonzalez1/Flight_Scheduling_Dashboard/blob/main/Flight%20Scheduling.xlsm). The file must be downloaded as a macro-enabled worksheet. **Note:** this project was implemented and tested on a Windows PC. It is possible that unforeseen technical issues can arise if the file is downloaded on a MacOS.
 
 <!-- USAGE EXAMPLES -->
 ## Statistical Model for Delay Prediction
@@ -76,7 +76,7 @@ As mentioned earlier, this statistical model was used twice. The first time arou
     
 ## Heuristic for Minimizing Gate Utilization
 
-For each terminal, a collection of flights are assigned to gates depending on their respective gate arrival and departure times. The heuristic used focuses on minimizing the amount of gates utilized within each terminal. As a result, this leads to fewer flight attendants needed to manage the terminal and therefore, cheaper operational costs for MCO. The `AssignGates()` function is located here: Excel Developer Tab>Visual Basic>VBAProject>Modules>Optimizer.
+For each terminal, a collection of flights are assigned to gates depending on their respective gate arrival and departure times. The implemented heuristic focuses on minimizing the amount of gates utilized within each terminal. As a result, this leads to fewer flight attendants needed to manage the terminal and therefore, cheaper operational costs for MCO. The `AssignGates()` function is located here: Excel Developer Tab > Visual Basic > VBAProject > Modules > Optimizer.
 
 ### Heuristic Steps
 
@@ -202,18 +202,23 @@ End Function
 
 Screenshots are provided below showcasing how to use the primary features of the main user interface. 
 
-Toggle the search criteria (date, time window, airside/terminal) to view flights currently scheduled. For a more specific search, use the search filters (airline, delay). Important: to update the dashboard, make sure to press the 'Search Flights' button.
+After entering the main screen, the user can toggle the search criteria (date, time window, airside/terminal) to view currently scheduled flights in the system. For a more specific search, use the provided search filters (airline, delay). **Important:** to update the dashboard with the new search criteria/filters, make sure to press the 'Search Flights' button.
 <br><br>
 <kbd>
 <img src="https://github.com/nicholasgonzalez1/Flight_Scheduling_Dashboard/blob/main/images/walkthrough_1.png?raw=true" width="800">
 </kbd><br><br>
 
-To view more details about a specific flight, double click any cell with a scheduled cell. The GUI will transition to another tab displaying more information about that flight.
+To view more details about a specific flight, double click any cell with a scheduled flight. The GUI will transition to another tab displaying more information about that flight.
 <br><br>
 <kbd>
 <img src="https://github.com/nicholasgonzalez1/Flight_Scheduling_Dashboard/blob/main/images/flight_info_screen.JPG?raw=true" width="800">
 </kbd><br><br>
 
+To reschedule a flight, select one of its scheduled cells and then press 'Reschedule Flight'. A menu will appear with two input fields. If the user would like to reschedule the flight to a time slot on another date and/or time window, they would select the inputs from the combo boxes and then press 'Accept New Location'. However, if the user wants to reschedule the flight to a time on the current date and time window, they would press 'Use Current Location'.
+<br><br>
+<kbd>
+<img src="https://github.com/nicholasgonzalez1/Flight_Scheduling_Dashboard/blob/main/images/walkthrough_3.png?raw=true" width="800">
+</kbd><br><br>
 
 
 
