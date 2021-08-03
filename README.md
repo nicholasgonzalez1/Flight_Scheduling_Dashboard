@@ -41,7 +41,7 @@ Due to the subject material of the course (Spreadsheet Decision Support Systems)
 
 The final version of the user interface can be downloaded off [the project's repository](https://github.com/nicholasgonzalez1/Flight_Scheduling_Dashboard/blob/main/Flight%20Scheduling.xlsm). The file must be downloaded as a macro-enabled worksheet. 
 <br><br>
-**Note:** this project was implemented and tested on a Windows PC. It is possible that unforeseen technical issues can arise if the file is downloaded on a MacOS.
+**Note:** this project was implemented and tested on a Windows PC. It is possible that unforeseen technical issues can arise if the file is downloaded on MacOS.
 
 <!-- USAGE EXAMPLES -->
 ## Statistical Model for Delay Prediction
