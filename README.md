@@ -229,7 +229,7 @@ To reschedule a flight, select one of its scheduled cells and then press 'Resche
 <br><br>
 <kbd>
 <img src="https://github.com/nicholasgonzalez1/Flight_Scheduling_Dashboard/blob/main/images/walkthrough_3.png?raw=true" width="800">
-</kbd><br><br>
+</kbd>
 
 After selecting either 'Use Current Location' or 'Accept New Location', the user will be prompted to highlight the flight's new location. After pressing 'OK', the system will verify that the flight's new arrival time is valid and that it does not overlap with any other scheduled flights.
 <br><br>
