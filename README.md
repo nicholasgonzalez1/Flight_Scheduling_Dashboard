@@ -237,7 +237,7 @@ After selecting either 'Use Current Location' or 'Accept New Location', the user
 <img src="https://github.com/nicholasgonzalez1/Flight_Scheduling_Dashboard/blob/main/images/walkthrough_4.png?raw=true" width="800">
 </kbd>
 ### Cancel a Flight
-To cancel a flight, select one of its scheduled cells and then press 'Cancel Flight'. A menu will appear prompting the user to confirm that they do want to cancel the flight. If 'Yes' is selected, the flight will no longer appear on the GUI.
+To cancel a flight, select one of its scheduled cells and then press 'Cancel Flight'. A menu will appear prompting the user to confirm that they do want to cancel the flight. If 'Yes' is selected, the flight will no longer appear on the GUI nor will it exist in the system.
 <br><br>
 <kbd>
 <img src="https://github.com/nicholasgonzalez1/Flight_Scheduling_Dashboard/blob/main/images/walkthrough_6.png?raw=true" width="800">
