@@ -239,9 +239,9 @@ After selecting either 'Use Current Location' or 'Accept New Location', the user
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 Thank you to my other team members:
-- [Anthony Joanes](linkedin.com/in/ajoanes)
-- Erin Dempsey
-- [Ivan Trpkovski](linkedin.com/in/ivan-trp2345)
-- [Samantha Pertsas](linkedin.com/in/samantha-pertsas-cssgb-72239b136)
+- [Anthony Joanes](https://www.linkedin.com/in/ajoanes)
+- [Ivan Trpkovski](https://www.linkedin.com/in/ivan-trp2345)
+- [Samantha Pertsas](https://www.linkedin.com/in/samantha-pertsas-cssgb-72239b136)
 - [Tej Patel](https://www.linkedin.com/in/tejmpatel/)
-- [Wade Niles](linkedin.com/in/wade-niles-4091381aa)
+- [Wade Niles](https://www.linkedin.com/in/wade-niles-4091381aa)
+- Erin Dempsey
