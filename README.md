@@ -215,13 +215,13 @@ After entering the main screen, the user can toggle the search criteria (date, t
 <br><br>
 <kbd>
 <img src="https://github.com/nicholasgonzalez1/Flight_Scheduling_Dashboard/blob/main/images/walkthrough_1.png?raw=true" width="800">
-</kbd><br><br>
+</kbd>
 ### View More Flight Information
 To view more details about a specific flight, double click any cell with a scheduled flight. The GUI will transition to another tab displaying more information about that flight.
 <br><br>
 <kbd>
 <img src="https://github.com/nicholasgonzalez1/Flight_Scheduling_Dashboard/blob/main/images/flight_info_screen.JPG?raw=true" width="800">
-</kbd><br><br>
+</kbd>
 ### Reschedule a Flight
 To reschedule a flight, select one of its scheduled cells and then press 'Reschedule Flight'. A menu will appear with two input fields. If the user would like to reschedule the flight to a time slot on another date and/or time window, they would select the inputs from the combo boxes and then press 'Accept New Location'. However, if the user wants to reschedule the flight to a time on the current date and time window, they would press 'Use Current Location'.
 <br><br>
@@ -233,7 +233,7 @@ After selecting either 'Use Current Location' or 'Accept New Location', the user
 <br><br>
 <kbd>
 <img src="https://github.com/nicholasgonzalez1/Flight_Scheduling_Dashboard/blob/main/images/walkthrough_4.png?raw=true" width="800">
-</kbd><br><br>
+</kbd>
 ### Cancel a Flight
 
 <!-- ACKNOWLEDGEMENTS -->
