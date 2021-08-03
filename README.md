@@ -76,7 +76,7 @@ As mentioned earlier, this statistical model was used twice. The first time arou
     
 ## Heuristic for Minimizing Gate Utilization
 
-For each terminal, a collection of flights are assigned to gates depending on their respective gate arrival and departure times. The heuristic used focuses on minimizing the amount of gates utilized within each terminal. As a result, this leads to fewer flight attendants needed to manage the terminal and therefore, cheaper operational costs for MCO.
+For each terminal, a collection of flights are assigned to gates depending on their respective gate arrival and departure times. The heuristic used focuses on minimizing the amount of gates utilized within each terminal. As a result, this leads to fewer flight attendants needed to manage the terminal and therefore, cheaper operational costs for MCO. The `AssignGates()` is located here: Excel Developer Tab>Visual Basic>VBAProject>Modules>Optimizer.
 
 ### Heuristic Steps
 
@@ -85,7 +85,7 @@ For each terminal, a collection of flights are assigned to gates depending on th
 3. If the gate times for ‘flight i’ do not overlap with the times for ‘flight j’, then ‘flight i’ is assigned to that gate and the outer loop continues (a new ‘flight i’).<br><br>
 4. If there is a time conflict between ‘flight i’ and ‘flight j’, we consider the last flight assigned for the next existing gate (a new ‘flight j’).<br><br>
 5. If flight i conflicts with all flight j’s, a new gate is created and flight i is added to that gate.<br><br>
-6. Each time the next iteration of the outer for loop begins, all gates in the `myGates` object are sorted so that the nested loop considers first the gates with the least amount of flights assigned to them.<br><br>
+6. Each time the next iteration of the outer for loop begins, all gates in the `myGates` object are sorted so that the nested loop considers first the gates with the least amount of flights assigned to them.
 
 ```vb
 Public Function AssignGates(ByVal myFlights As Collection, ByVal Airside As Integer) As Collection
